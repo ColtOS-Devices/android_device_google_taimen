@@ -63,6 +63,7 @@ lib64/vendor.qti.qcril.am@1.0.so
 -priv-app/VzwOmaTrigger/VzwOmaTrigger.apk;PRESIGNED
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -product/app/SSRestartDetector/SSRestartDetector.apk
+-product/app/Tycho/Tycho.apk;PRESIGNED
 -product/app/VZWAPNLib/VZWAPNLib.apk
 product/etc/ambient/matcher_tah.leveldb
 product/etc/CarrierSettings/airtel_in.pb
@@ -187,6 +188,7 @@ product/lib64/libaptX_encoder.so
 -product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 product/priv-app/EuiccSupportPixel/esim0.img
 -product/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk;PRESIGNED
+-product/priv-app/GCS/GCS.apk;PRESIGNED
 -product/priv-app/HardwareInfo/HardwareInfo.apk
 -product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk;PRESIGNED
 -product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk;PRESIGNED

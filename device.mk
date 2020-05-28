@@ -147,3 +147,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #    debug.sf.early_gl_phase_offset_ns=1500000
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    ims-ext-common \
+    ims_ext_common.xml

@@ -18,25 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-#
-# All components inherited here go to system_ext image
-#
-$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
-
-# All components inherited here go to product image
-#
-$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
-
-#
-# All components inherited here go to vendor image
-#
-# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
-$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
-# Inherit some common hentai stuff.
-$(call inherit-product, vendor/hentai/config/common_telephony.mk)
+$(call inherit-product, vendor/colt/config/common.mk)
 
 # Inherit product speciifc makefiles
 $(call inherit-product, device/google/taimen/device.mk)
@@ -47,6 +29,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := hentai_taimen
+PRODUCT_NAME := colt_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_MODEL := Pixel 2 XL

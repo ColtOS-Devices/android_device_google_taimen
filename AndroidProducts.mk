@@ -15,8 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/hentai_taimen.mk
+    $(LOCAL_DIR)/colt_taimen.mk
 
 COMMON_LUNCH_CHOICES := \
-    hentai_taimen-user \
-    hentai_taimen-userdebug
+    colt_taimen-user \
+    colt_taimen-userdebug \
+    colt_taimen-eng

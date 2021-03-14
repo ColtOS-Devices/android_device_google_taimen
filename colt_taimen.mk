@@ -26,27 +26,37 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 # All components inherited here go to product image
 #
-$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
-
-#
-# All components inherited here go to vendor image
-#
-# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
-$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
-# Inherit some common hentai stuff.
-$(call inherit-product, vendor/hentai/config/common_telephony.mk)
+$(call inherit-product, vendor/colt/config/common.mk)
 
 # Inherit product speciifc makefiles
 $(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product, vendor/google/taimen/taimen-vendor.mk)
 
+# EUICC
 PRODUCT_COPY_FILES += \
-    device/google/taimen/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+
+PRODUCT_COPY_FILES += \
+    device/google/taimen/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    device/google/taimen/permissions/privapp-permissions-aosp-extended.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-aosp-extended.xml
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := hentai_taimen
+PRODUCT_NAME := colt_taimen
 PRODUCT_DEVICE := taimen
-PRODUCT_MODEL := Pixel 5a
+PRODUCT_MODEL := Pixel 2 XL
+
+REMOVE_GAPPS_PACKAGES += \
+	arcore \
+	CalculatorGooglePrebuilt \
+	CalendarGooglePrebuilt \
+	Drive \
+	PrebuiltGmail \
+	Chrome \
+	Chrome-Stub \
+	Photos \
+        PixelThemesStub \
+        PixelWallpapers2020 \
+	Maps \
+	YouTube \
+	YouTubeMusicPrebuilt
